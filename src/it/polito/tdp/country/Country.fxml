@@ -1,7 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.BorderPane?>
-	
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.country.ContryController">
-	<!-- TODO Add Nodes -->
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.country.ContryController">
+   <top>
+      <Label text="Country Borders" BorderPane.alignment="CENTER" />
+   </top>
+   <center>
+      <VBox spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox spacing="10.0">
+               <children>
+                  <Label text="Seleziona uno stato di partenza: " />
+                  <ComboBox fx:id="boxPartenza" prefWidth="150.0" />
+                  <Button mnemonicParsing="false" onAction="#handleRaggiungibili" text="Cerca raggiungibili" />
+               </children>
+            </HBox>
+            <HBox spacing="10.0">
+               <children>
+                  <Label text="Seleziona uno stato di destinazione" />
+                  <ComboBox fx:id="boxDestinazione" prefWidth="150.0" />
+                  <Button mnemonicParsing="false" onAction="#handlePercorso" text="Cerca percorso" />
+               </children>
+            </HBox>
+            <TextArea fx:id="txtResult" />
+         </children>
+      </VBox>
+   </center>
 </BorderPane>
