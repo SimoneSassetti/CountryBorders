@@ -35,7 +35,7 @@ public class Model {
 		BreadthFirstIterator<Country, DefaultEdge> bfi= new BreadthFirstIterator<Country, DefaultEdge>(g, partenza);
 		
 		List<Country> list=new ArrayList<Country>();
-		Map<Country, Country> albero=new HashMap<>();
+		Map<Country, Country> albero=new HashMap<Country, Country>();
 		//LO INIZIALIZZO
 		albero.put(partenza, null);
 		

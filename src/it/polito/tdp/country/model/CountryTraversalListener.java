@@ -13,7 +13,7 @@ public class CountryTraversalListener implements TraversalListener<Country, Defa
 	private Graph<Country, DefaultEdge> graph;
 	private Map<Country, Country> map;
 	
-	public CountryTraversalListener(Graph graph, java.util.Map<Country, Country> map) {
+	public CountryTraversalListener(Graph graph, Map<Country, Country> map) {
 		super();
 		this.graph = graph;
 		this.map = map;
@@ -38,7 +38,7 @@ public class CountryTraversalListener implements TraversalListener<Country, Defa
 		//dall arco estraggo il padre e il figlio; questi gli aggiungo ad una mappa
 		
 		Country c1=graph.getEdgeSource(evento.getEdge());
-		Country c2=graph.getEdgeSource(evento.getEdge());
+		Country c2=graph.getEdgeTarget(evento.getEdge());
 		
 		if(map.containsKey(c1) && map.containsKey(c2))
 			return ;
